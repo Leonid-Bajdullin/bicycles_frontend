@@ -1,24 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NewBikeForm from './components/NewBikeForm';
+import BikesList from './components/BikesList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h3>Awesome Bike Rental</h3>
+      <NewBikeForm />
+      <BikesList name="Your rent" path="get_rented_bikes" />
+      <BikesList name="Available bicycles" path="get_free_bikes" />
     </div>
   );
 }
