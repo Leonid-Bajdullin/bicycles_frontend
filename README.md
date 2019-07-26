@@ -33,7 +33,7 @@ change the inputs of <b>ormconfig.json</b> in root folder of backend project to 
 
 =======================================================================
 
-<b>NOTE!</b> server runs on <b>localhost:4000</b>, so if u want to use another port - change it in <b>server.ts</b> (dont forget to compile), and also change the <b>proxy</b> setting <b>package.json</b> file in frontend project (https://github.com/Leonid-Bajdullin/bicycles_frontend) to port, that you want to use.
+<b>NOTE!</b> server runs on <b>localhost:4000</b>, so if u want to use another port - change it in <b>server.ts</b> (dont forget to compile), and also change the <b>proxy</b> setting in <b>package.json</b> file in frontend project (https://github.com/Leonid-Bajdullin/bicycles_frontend) to port, that you want to use.
 
 =======================================================================
 
