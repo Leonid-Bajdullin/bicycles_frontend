@@ -4,6 +4,8 @@ Frontend : React, React Bootstrap<br>
 Backend : Node.js, Express.js, TypeORM, REST API<br>
 DB : PostgreSQL<br>
 
+Screenshot: https://prnt.sc/ok89ee
+
 ## STEPS TO START THIS PROJECT:
 
 =======================================================================
