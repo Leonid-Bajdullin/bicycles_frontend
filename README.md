@@ -8,9 +8,9 @@ DB : PostgreSQL<br>
 
 =======================================================================
 
-NOTE! to see the app changes, first you must install PostgreSQL database with:
--user "postgres"
--password "free2play"
+<b>NOTE!</b> to see the app changes, first you must install PostgreSQL database with:<br>
+-user "postgres"<br>
+-password "free2play"<br>
 and create DB "bicycles" in it
 or
 change the inputs of "ormconfig.json" in root folder of backend project to match your choice.
@@ -31,7 +31,7 @@ change the inputs of "ormconfig.json" in root folder of backend project to match
 
 =======================================================================
 
-NOTE! server runs on "localhost:4000", so if u want to use another port - change it in server.ts (dont forget to compile), and also change the "proxy" setting in frontend project (https://github.com/Leonid-Bajdullin/bicycles_frontend) to port, that you want to use.
+<b>NOTE!</b> server runs on "localhost:4000", so if u want to use another port - change it in server.ts (dont forget to compile), and also change the "proxy" setting in frontend project (https://github.com/Leonid-Bajdullin/bicycles_frontend) to port, that you want to use.
 
 =======================================================================
 
