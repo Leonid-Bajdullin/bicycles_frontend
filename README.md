@@ -7,12 +7,14 @@ DB : PostgreSQL<br>
 ## STEPS TO START THIS PROJECT:
 
 =======================================================================
+
 NOTE! to see the app changes, first you must install PostgreSQL database with:
 -user "postgres"
 -password "free2play"
 and create DB "bicycles" in it
 or
 change the inputs of "ormconfig.json" in root folder of backend project to match your choice.
+
 =======================================================================
 
 1. clone the backend project to your local repository
@@ -28,7 +30,9 @@ change the inputs of "ormconfig.json" in root folder of backend project to match
 ### `node server.js`
 
 =======================================================================
+
 NOTE! server runs on "localhost:4000", so if u want to use another port - change it in server.ts (dont forget to compile), and also change the "proxy" setting in frontend project (https://github.com/Leonid-Bajdullin/bicycles_frontend) to port, that you want to use.
+
 =======================================================================
 
 4. clone the frontend project to your local repository
