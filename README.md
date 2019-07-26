@@ -1,10 +1,8 @@
-BICYCLES PROJECT
+## BICYCLES PROJECT
 
-Frontend : React, React Bootstrap
-Backend : Node.js, Express.js, TypeORM, REST API
-DB : PostgreSQL
-
----
+Frontend : React, React Bootstrap<br>
+Backend : Node.js, Express.js, TypeORM, REST API<br>
+DB : PostgreSQL<br>
 
 ## STEPS TO START THIS PROJECT:
 
@@ -15,15 +13,39 @@ and create DB "bicycles" in it
 or
 change the inputs of "ormconfig.json" in root folder of backend project to match your choice.
 
-1. clone the backend project to your local repository (git clone https://github.com/Leonid-Bajdullin/bicycles_backend.git)
-2. change to cloned project folder (cd bicycles_backend) and install dependencies (npm install)
-3. run the server (node server.js)
+1. clone the backend project to your local repository
+
+### `git clone https://github.com/Leonid-Bajdullin/bicycles_backend.git`
+
+2. change to cloned project folder
+
+### `cd bicycles_backend`
+
+and install dependencies
+
+### `npm install`
+
+3. run the server
+
+### `node server.js`
 
 NOTE! server runs on "localhost:4000", so if u want to use another port - change it in server.ts (dont forget to compile), and also change the "proxy" setting in frontend project (https://github.com/Leonid-Bajdullin/bicycles_frontend) to port, that you want to use.
 
-4. clone the frontend project to your local repository (git clone https://github.com/Leonid-Bajdullin/bicycles_frontend.git)
-5. change to cloned project folder (cd bicycles_frontend) and install dependencies (npm install)
-6. run the application (npm start)
+4. clone the frontend project to your local repository
+
+### `git clone https://github.com/Leonid-Bajdullin/bicycles_frontend.git`
+
+5. change to cloned project folder
+
+### `cd bicycles_frontend`
+
+and install dependencies
+
+### `npm install`
+
+6. run the application
+
+### `npm start`
 
 7. Add new bikes for rent, rent them and delete as you wish
 
