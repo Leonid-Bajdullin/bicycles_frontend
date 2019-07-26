@@ -1,73 +1,27 @@
-import React, { Component } from 'react';
-import HelperFunctions from '../utils/HelperFunctions';
-import BikeInfo from './BikeInfo';
-import ListGroup from 'react-bootstrap/ListGroup';
+import React from "react";
+import BikeListItem from "./BikeListItem";
+import ListGroup from "react-bootstrap/ListGroup";
 
-class bikesList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      bikesList: []
-    };
-  }
-
-  async componentDidMount() {
-    const bikesArray = await HelperFunctions.fetchFunc(
-      'GET',
-      {},
-      `${this.props.path}`
-    );
-    this.setState({ bikesList: bikesArray });
-  }
-
-  // async componentDidUpdate() {
-  //   const bikesArray = await HelperFunctions.fetchFunc(
-  //     'GET',
-  //     {},
-  //     `${this.props.path}`
-  //   );
-  //   this.setState({ bikesList: bikesArray });
-  // }
-
-  render() {
-    return (
-      <div>
-        <h3>
-          {this.props.name}({bikesList.length})
-        </h3>
-        <ListGroup>
-          {this.state.bikesList.map((item) => (
-            <ListGroup.Item key={item.id}>
-              <BikeInfo
-                id={item.id}
-                name={item.name}
-                type={item.type}
-                rent_price={item.rent_price}
-                is_rented={item.is_rented}
-              />
-            </ListGroup.Item>
-          ))}
-        </ListGroup>
-      </div>
-    );
-  }
-
-  // render() {
-  //   return (
-  //     <div>
-  //       {this.state.bikesList.map((item) => (
-  //         <BikeInfo
-  //           key={item.id}
-  //           id={item.id}
-  //           name={item.name}
-  //           type={item.type}
-  //           rent_price={item.rent_price}
-  //           is_rented={item.is_rented}
-  //         />
-  //       ))}
-  //     </div>
-  //   );
-  // }
+function BikesList(props) {
+  return (
+    <div>
+      <h4>{props.name}</h4>
+      <ListGroup>
+        {props.list.map(item => (
+          <ListGroup.Item key={item.id}>
+            <BikeListItem
+              id={item.id}
+              name={item.name}
+              type={item.type}
+              rent_price={item.rent_price}
+              is_rented={item.is_rented}
+              onItemChanged={props.onItemChanged}
+            />
+          </ListGroup.Item>
+        ))}
+      </ListGroup>
+    </div>
+  );
 }
 
-export default bikesList;
+export default BikesList;

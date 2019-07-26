@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import HelperFunctions from '../utils/HelperFunctions';
-import Button from 'react-bootstrap/Button';
+import React, { Component } from "react";
+import HelperFunctions from "../utils/HelperFunctions";
+import Button from "react-bootstrap/Button";
 
-class BikeInfo extends Component {
+class BikeListItem extends Component {
   constructor(props) {
     super(props);
 
@@ -18,33 +18,47 @@ class BikeInfo extends Component {
   //Methods
   rentBike = async () => {
     const res = await HelperFunctions.fetchFunc(
-      'PUT',
+      "PUT",
       {},
       `rent_bike/${this.state.id}`
     );
-    if (res.is_rented === true) console.log('Bike rented successfully!');
+    if (res.is_rented) console.log("Bike rented successfully!");
+    this.props.onItemChanged();
   };
 
   unrentBike = async () => {
     const res = await HelperFunctions.fetchFunc(
-      'PUT',
+      "PUT",
       {},
       `unrent_bike/${this.state.id}`
     );
-    if (res.is_rented === false) console.log('Bike freed successfully!');
+    if (!res.is_rented) console.log("Bike freed successfully!");
+    this.props.onItemChanged();
   };
 
   deleteBike = async () => {
     const res = await HelperFunctions.fetchFunc(
-      'DELETE',
+      "DELETE",
       {},
       `delete_bike/${this.state.id}`
     );
-    if (res.affected === 1) console.log('Bike deleted!');
+    if (res.affected) console.log("Bike deleted!");
+    this.props.onItemChanged();
   };
 
   render() {
-    return this.state.is_rented === false ? (
+    return this.state.is_rented ? (
+      <div className="item">
+        <div className="bike-info">
+          {this.state.name} / {this.state.type} / {this.state.rent_price}
+        </div>
+        <div>
+          <Button variant="danger" onClick={this.unrentBike}>
+            Cancel rent
+          </Button>
+        </div>
+      </div>
+    ) : (
       <div className="item">
         <div className="bike-info">
           {this.state.name} / {this.state.type} / {this.state.rent_price}
@@ -58,19 +72,8 @@ class BikeInfo extends Component {
           </Button>
         </div>
       </div>
-    ) : (
-      <div className="item">
-        <div className="bike-info">
-          {this.state.name} / {this.state.type} / {this.state.rent_price}
-        </div>
-        <div>
-          <Button variant="danger" onClick={this.unrentBike}>
-            Cancel rent
-          </Button>
-        </div>
-      </div>
     );
   }
 }
 
-export default BikeInfo;
+export default BikeListItem;
