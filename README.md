@@ -9,11 +9,11 @@ DB : PostgreSQL<br>
 =======================================================================
 
 <b>NOTE!</b> to see the app changes, first you must install PostgreSQL database with:<br>
--user "postgres"<br>
--password "free2play"<br>
-and create DB "bicycles" in it
+-user <b>postgres</b><br>
+-password <b>free2play</b><br>
+and create DB <b>bicycles</b> in it
 or
-change the inputs of "ormconfig.json" in root folder of backend project to match your choice.
+change the inputs of <b>ormconfig.json</b> in root folder of backend project to match your choice.
 
 =======================================================================
 
@@ -31,7 +31,7 @@ change the inputs of "ormconfig.json" in root folder of backend project to match
 
 =======================================================================
 
-<b>NOTE!</b> server runs on "localhost:4000", so if u want to use another port - change it in server.ts (dont forget to compile), and also change the "proxy" setting in frontend project (https://github.com/Leonid-Bajdullin/bicycles_frontend) to port, that you want to use.
+<b>NOTE!</b> server runs on <b>localhost:4000</b>, so if u want to use another port - change it in <b>serber.ts</b> (dont forget to compile), and also change the <b>proxy</b> setting in frontend project (https://github.com/Leonid-Bajdullin/bicycles_frontend) to port, that you want to use.
 
 =======================================================================
 
@@ -46,8 +46,6 @@ change the inputs of "ormconfig.json" in root folder of backend project to match
 6. run the application
 
 ### `npm start`
-
-7. Add new bikes for rent, rent them and delete as you wish
 
 =========================================================================
 
